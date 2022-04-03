@@ -1,10 +1,9 @@
-import './App.css';
-import Home from './components/Home/Home';
-import Header from './components/Header/Header';
 import { Route, Routes } from 'react-router-dom';
-import OrderReview from './components/OrderReview/OrderReview';
+import './App.css';
 import Grandpa from './components/Grandpa/Grandpa';
-
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import OrderReview from './components/OrderReview/OrderReview';
 function App() {
   return (
     <div className="App">
@@ -12,9 +11,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='orderreview' element={<OrderReview></OrderReview>}></Route>
+        <Route path='/orderreview' element={<OrderReview></OrderReview>}></Route>
         <Route path='/grandpa' element={<Grandpa></Grandpa>}></Route>
       </Routes>
+
     </div>
   );
 }

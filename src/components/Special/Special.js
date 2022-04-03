@@ -6,8 +6,9 @@ const Special = () => {
     return (
         <div>
             <h5>Special</h5>
-            <p><small>Gift: {house}</small></p>
-            <button onClick={() => setHouse(house + 1)}>Buy a house</button>
+            <p>Gift:{house}</p>
+            <button onClick={() => setHouse(house + 1)}>buy a house</button>
+
         </div>
     );
 };

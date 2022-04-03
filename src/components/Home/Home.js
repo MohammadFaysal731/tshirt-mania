@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import useTShirts from '../../hooks/useTShirts';
 import Cart from '../Cart/Cart';
 import TShirt from '../TShirt/TShirt';
-import './Home.css';
-
+import './Home.css'
 const Home = () => {
     const [tShirts, setTShirts] = useTShirts();
+
     const [cart, setCart] = useState([]);
 
     const handleAddToCart = (selectedItem) => {
@@ -14,10 +14,9 @@ const Home = () => {
             const newCart = [...cart, selectedItem];
             setCart(newCart);
         }
-        else{
-            alert('item already added');
+        else {
+            alert('item already added')
         }
-
     }
 
     const handleRemoveFromCart = (selectedItem) => {
@@ -30,16 +29,18 @@ const Home = () => {
             <div className="tshirt-container">
                 {
                     tShirts.map(tShirt => <TShirt
-                        key={tShirt._id}
                         tShirt={tShirt}
+                        key={tShirt._id}
                         handleAddToCart={handleAddToCart}
+
                     ></TShirt>)
                 }
             </div>
             <div className="cart-container">
                 <Cart
-                    handleRemoveFromCart={handleRemoveFromCart}
                     cart={cart}
+                    key={cart._id}
+                    handleRemoveFromCart={handleRemoveFromCart}
                 ></Cart>
             </div>
         </div>

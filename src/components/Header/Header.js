@@ -5,11 +5,11 @@ import './Header.css';
 const Header = () => {
     return (
         <div>
-            <h2>Welcome to TShirt Mania!!!</h2>
+            <h3>Welcome to TShirt Mania !!!</h3>
             <nav>
-                <Link to="/home">Home</Link>
-                <Link to="/orderreview">Order Review</Link>
-                <Link to="/grandpa">GrandPa</Link>
+                <Link to='/home'>Home</Link>
+                <Link to='/orderreview'>Order Review</Link>
+                <Link to='/grandpa'>GrandPa</Link>
             </nav>
         </div>
     );
